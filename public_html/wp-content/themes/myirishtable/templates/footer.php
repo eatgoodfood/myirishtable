@@ -11,12 +11,12 @@
 	    
 	    	<div class="col-sm-4 col-xs-4">
 	    		<p class="ss-location big footer-icon"></p>
-	      		<?php dynamic_sidebar('sidebar-footer'); ?>
+	      		<?php dynamic_sidebar('sidebar-footer-b'); ?>
 	    	</div>
 	    	
 	    	<div class="col-sm-4 col-xs-4">
 	    		<p class="ss-usergroup big footer-icon"></p>
-		  <?php dynamic_sidebar('sidebar-footer'); ?>
+		  <?php dynamic_sidebar('sidebar-footer-c'); ?>
 		    </div>
 		    
 		</div><!-- /.row -->
