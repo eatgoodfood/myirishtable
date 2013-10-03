@@ -13,6 +13,18 @@
  *
  * @package WordPress
  */
+ 
+ //Use these settings on the local server if local config file is present
+if ( file_exists( dirname( __FILE__ ) . '/wp-config-local.php' ) ) {
+	include(dirname( __FILE__) . '/wp-config-local.php' );
+
+//Otherwise use these settings on the playground server if playground config is present
+} elseif 
+	( file_exists( dirname( __FILE__ ) . '/wp-config-staging.php' ) ) {
+	include(dirname( __FILE__) . '/wp-config-staging.php' );
+
+//Otherwise use the below settings (on live server)
+} else {
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -53,6 +65,10 @@ define('NONCE_SALT',       'put your unique phrase here');
 
 /**#@-*/
 
+// Overwrites the database to save keep editing the DB
+define('WP_HOME', 'http://myirishtable.com');
+define('WP_SITEURL','http://myirishtable.com');
+
 /**
  * WordPress Database Table prefix.
  *
@@ -79,6 +95,7 @@ define('WPLANG', '');
  * in their development environments.
  */
 define('WP_DEBUG', false);
+}
 
 /* That's all, stop editing! Happy blogging. */
 
