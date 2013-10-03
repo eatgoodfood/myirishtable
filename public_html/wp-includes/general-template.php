@@ -478,7 +478,7 @@ function get_bloginfo( $show = '', $filter = 'raw' ) {
 			$output = get_feed_link('comments_rss2');
 			break;
 		case 'pingback_url':
-			$output = get_option('siteurl') .'/xmlrpc.php';
+			$output = site_url( 'xmlrpc.php' );
 			break;
 		case 'stylesheet_url':
 			$output = get_stylesheet_uri();
@@ -883,17 +883,16 @@ function single_month_title($prefix = '', $display = true ) {
  */
 function get_archives_link($url, $text, $format = 'html', $before = '', $after = '') {
 	$text = wptexturize($text);
-	$title_text = esc_attr($text);
 	$url = esc_url($url);
 
 	if ('link' == $format)
-		$link_html = "\t<link rel='archives' title='$title_text' href='$url' />\n";
+		$link_html = "\t<link rel='archives' title='" . esc_attr( $text ) . "' href='$url' />\n";
 	elseif ('option' == $format)
 		$link_html = "\t<option value='$url'>$before $text $after</option>\n";
 	elseif ('html' == $format)
-		$link_html = "\t<li>$before<a href='$url' title='$title_text'>$text</a>$after</li>\n";
+		$link_html = "\t<li>$before<a href='$url'>$text</a>$after</li>\n";
 	else // custom
-		$link_html = "\t$before<a href='$url' title='$title_text'>$text</a>$after\n";
+		$link_html = "\t$before<a href='$url'>$text</a>$after\n";
 
 	$link_html = apply_filters( 'get_archives_link', $link_html );
 
