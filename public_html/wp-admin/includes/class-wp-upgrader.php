@@ -1089,13 +1089,13 @@ class Language_Pack_Upgrader extends WP_Upgrader {
 	}
 
 	function upgrade_strings() {
-		$this->strings['starting_upgrade'] = __( 'Some of your language files need updating. Sit tight for a few more seconds while we update them as well.' );
-		$this->strings['up_to_date'] = __( 'The language is up to date.' ); // We need to silently skip this case
+		$this->strings['starting_upgrade'] = __( 'Some of your translations need updating. Sit tight for a few more seconds while we update them as well.' );
+		$this->strings['up_to_date'] = __( 'The translation is up to date.' ); // We need to silently skip this case
 		$this->strings['no_package'] = __( 'Update package not available.' );
-		$this->strings['downloading_package'] = __( 'Downloading language update from <span class="code">%s</span>&#8230;' );
+		$this->strings['downloading_package'] = __( 'Downloading translation from <span class="code">%s</span>&#8230;' );
 		$this->strings['unpack_package'] = __( 'Unpacking the update&#8230;' );
-		$this->strings['process_failed'] = __( 'Language update failed.' );
-		$this->strings['process_success'] = __( 'Language updated successfully.' );
+		$this->strings['process_failed'] = __( 'Translation update failed.' );
+		$this->strings['process_success'] = __( 'Translation updated successfully.' );
 	}
 
 	function upgrade( $update = false ) {
@@ -1224,8 +1224,8 @@ class Core_Upgrader extends WP_Upgrader {
 		$this->strings['unpack_package'] = __('Unpacking the update&#8230;');
 		$this->strings['copy_failed'] = __('Could not copy files.');
 		$this->strings['copy_failed_space'] = __('Could not copy files. You may have run out of disk space.' );
-		$this->strings['start_rollback'] = __( 'Attempting to rollback to previous version.' );
-		$this->strings['rollback_was_required'] = __( 'Due to an error during updating, WordPress has rolled back to your previous version' );
+		$this->strings['start_rollback'] = __( 'Attempting to roll back to previous version.' );
+		$this->strings['rollback_was_required'] = __( 'Due to an error during updating, WordPress has rolled back to your previous version.' );
 	}
 
 	function upgrade( $current, $args = array() ) {
@@ -1254,11 +1254,11 @@ class Core_Upgrader extends WP_Upgrader {
 		// Pre-cache the checksums for the versions we care about
 		get_core_checksums( array( $wp_version, $current->version ) );
 
-		$no_partial = false;
+		$partial = true;
 		if ( $parsed_args['do_rollback'] )
-			$no_partial = true;
+			$partial = false;
 		elseif ( $parsed_args['pre_check_md5'] && ! $this->check_files() )
-			$no_partial = true;
+			$partial = false;
 
 		// If partial update is returned from the API, use that, unless we're doing a reinstall.
 		// If we cross the new_bundled version number, then use the new_bundled zip.
@@ -1266,7 +1266,7 @@ class Core_Upgrader extends WP_Upgrader {
 		// If the API returns a no_content zip, go with it. Finally, default to the full zip.
 		if ( $parsed_args['do_rollback'] && $current->packages->rollback )
 			$to_download = 'rollback';
-		elseif ( $current->packages->partial && 'reinstall' != $current->response && $wp_version == $current->partial_version && ! $no_partial )
+		elseif ( $current->packages->partial && 'reinstall' != $current->response && $wp_version == $current->partial_version && $partial )
 			$to_download = 'partial';
 		elseif ( $current->packages->new_bundled && version_compare( $wp_version, $current->new_bundled, '<' )
 			&& ( ! defined( 'CORE_UPGRADE_SKIP_NEW_BUNDLED' ) || ! CORE_UPGRADE_SKIP_NEW_BUNDLED ) )
@@ -1597,23 +1597,23 @@ class WP_Automatic_Upgrader {
 			case 'theme':
 				$theme = wp_get_theme( $item );
 				$item_name = $theme->Get( 'Name' );
-				$skin->feedback( __( 'Updating Theme: %s' ), $item_name );
+				$skin->feedback( __( 'Updating theme: %s' ), $item_name );
 				break;
 			case 'plugin':
 				$plugin_data = get_plugin_data( $context . '/' . $item );
 				$item_name = $plugin_data['Name'];
-				$skin->feedback( __( 'Updating Plugin: %s' ), $item_name );
+				$skin->feedback( __( 'Updating plugin: %s' ), $item_name );
 				break;
 			case 'language':
 				if ( 'theme' == $item->type ) {
 					$theme = wp_get_theme( $item->slug );
 					$skin->feedback( sprintf(
-						__( 'Updating the %1$s language files for the %2$s Theme' ),
+						__( 'Updating the %1$s translation for the %2$s theme' ),
 						$item->language,
 						$theme->Get( 'Name' )
 					) );
 					$item_name = sprintf(
-						__( '%1$s translation for the %2$s Theme' ),
+						__( '%1$s translation for the %2$s theme' ),
 						$item->language,
 						$theme->Get( 'Name' )
 					);
@@ -1621,12 +1621,12 @@ class WP_Automatic_Upgrader {
 					$plugin_data = get_plugins( '/' . $item->slug );
 					$plugin_data = array_shift( $plugin_data );
 					$skin->feedback( sprintf(
-						__( 'Updating the %1$s language files for the %2$s Plugin' ),
+						__( 'Updating the %1$s translation for the %2$s plugin' ),
 						$item->language,
 						$plugin_data['Name']
 					) );
 					$item_name = sprintf(
-						__( '%1$s translation for the %2$s Plugin' ),
+						__( '%1$s translation for the %2$s plugin' ),
 						$item->language,
 						$plugin_data['Name']
 					);
