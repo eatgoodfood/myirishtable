@@ -34,24 +34,23 @@
     <div class="container strip light">
     	<div class="content-holder">
 	    	<div class="row">
-	    		<div class="col-sm-2 .hidden-xs">
-	    			
-	    		</div>
-	    		<div class="col-sm-6">
-					<h3 class="call-out">Available March 11, 2014</h3>
+	    		<div class="col-sm-5 col-sm-offset-1">
+					<h3 class="call-out">March 11, 2014</h3>
 					<ul class="marketing-list list-unstyled">
 						<li><span class="ss-list md-icon"></span> 130 recipes showcasing modern Irish fare</li>
 						<li><span class="ss-book md-icon"></span> Debut cookbook from Cathal Armstrong</li>
 						<li><span class="ss-compass md-icon"></span> A journey from Dublin to Washington, D.C.</li>
 					</ul>
 	    		</div>
-	    		<div class="col-sm-2">
-		    		<a href="http://amzn.com/B00F8FA8A4" target="_blank"><button class="btn btn-primary btn-lg buffer">Pre-order Book</button></a>
-		    		<a href="https://www.instagram.com/myirishtable" targte="_blank"><button class="btn btn-default btn-lg buffer">Follow on Instagram</button></a>
-		    		<a href="http://restauranteve.com/index.cfm/reservations/" target="_blank"><button class="btn btn-default btn-lg buffer">Make a Reservation</button></a>
-	    		</div>
-	    		<div class="col-sm-2 .hidden-xs">
-					
+	    		<div class="col-sm-5 col-sm-offset-1">
+	    			<h3 class="call-out">Pre-order</h3>
+		    		<ul class="marketing-list">
+				  		<li><a href="http://www.amazon.com/gp/product/1607744309?ie=UTF8&tag=randohouseinc5879-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1607744309" target="_blank">Amazon</a></li>
+				  		<li><a href="http://search.barnesandnoble.com/booksearch/isbnInquiry.asp?EAN=9781607744306&cm_mmc=Random%20House-_-My+Irish+Table-HC--myirishtable-9781607744306-_-My+Irish+Table-HC--myirishtable-9781607744306-_-My+Irish+Table" target="_blank">Barnes & Noble</a></li>
+				  		<li><a href="http://www.indiebound.org/product/info.jsp?affiliateId=randomhouse1&isbn=1607744309" target="_blank">Indiebound</a></li>
+				  		<li><a href="https://itunes.apple.com/us/book/my-irish-table/id707354997?mt=11" target="_blank">iTunes</a></li>
+				  		<li><a href="https://play.google.com/store/search?q=9781607744313&c=books" target="_blank">Google Books</a></li>
+					</ul>
 	    		</div>
 	    	</div>
     	</div>
@@ -63,7 +62,7 @@
 				
 		<div class="container strip dark">
 		
-			<p class="big typea"><span class="ss-instagram ss-social-regular drop"></span>  Instagram</p>
+
 			
 			<div class="container content-holder">
 			
@@ -85,7 +84,7 @@
 					<?php foreach ($result->data as $post): ?>
 					
 					<div class="col-sm-2">
-						<a href="<?php echo $post->link ?>" target="_blank" title="<?php echo $post->caption->text ?>"><img class="insta-pic" src="<?php echo $post->images->thumbnail->url ?>" alt="<?php echo $post->caption->text ?>" /></a>
+						<a href="<?php echo $post->link ?>" target="_blank" title="<?php echo $post->caption->text ?>"><img class="insta-pic img-responsive" src="<?php echo $post->images->thumbnail->url ?>" alt="<?php echo $post->caption->text ?>" /></a>
 					</div>
 					
 					<?php endforeach ?>
