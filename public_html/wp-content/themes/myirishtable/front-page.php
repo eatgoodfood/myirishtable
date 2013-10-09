@@ -2,7 +2,6 @@
  	
 		<div class="col-sm-4">
 			<div class="box">
-	 			<h3 class="call-out"><span class="ss-calendar md-icon"></span></h3>
 				<h3 class="call-out">March 11, 2014</h3>
 				<ul class="marketing-list">
 					<li>130 recipes showcasing modern Irish fare</li>
@@ -14,7 +13,6 @@
 		
  		<div class="col-sm-4">
  			<div class="box">
-	  			<h3 class="call-out"><span class="ss-cart md-icon"></span></h3>
 	  			<h3 class="call-out">Availability</h3>
 	  			<table class="table table-responsive">
 	  				<thead>
@@ -51,7 +49,6 @@
  		
  		<div class="col-sm-4">
   			<div class="box">
-	  			<h3 class="call-out"><span class="ss-icon ss-social-regular ss-instagram md-icon"></h3>
 	  			<h3 class="call-out">Instagram</h3>
 	
 	   			<!-- Make Instagram API Request -->
