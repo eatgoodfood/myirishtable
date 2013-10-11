@@ -42,7 +42,7 @@ function roots_widgets_init() {
 
   register_sidebar(array(
     'name'          => __('Cathal', 'roots'),
-    'id'            => 'cathal',
+    'id'            => 'sidebar-cathal-armstrong',
     'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
     'before_title'  => '<h3>',
@@ -51,7 +51,7 @@ function roots_widgets_init() {
 
   register_sidebar(array(
     'name'          => __('David', 'roots'),
-    'id'            => 'david',
+    'id'            => 'sidebar-david-hagedorn',
     'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
     'before_title'  => '<h3>',
