@@ -3,5 +3,6 @@
 node_modules
 .DS_Store
 .htaccess
+public_html/wp-config.php
 public_html/wp-config-local.php
 public_html/media
