@@ -748,15 +748,15 @@ function update_meta( $meta_id, $meta_key, $meta_value ) {
  * @since 2.3.0
  * @access private
  *
- * @param unknown_type $post_ID
- * @return unknown
+ * @param int|object $post Post ID or post object.
+ * @return void|int|WP_Error Void if nothing fixed. 0 or WP_Error on update failure. The post ID on update success.
  */
-function _fix_attachment_links( $post_ID ) {
-	$post = get_post( $post_ID, ARRAY_A );
+function _fix_attachment_links( $post ) {
+	$post = get_post( $post, ARRAY_A );
 	$content = $post['post_content'];
 
-	// quick sanity check, don't run if no pretty permalinks or post is not published
-	if ( !get_option('permalink_structure') || $post['post_status'] != 'publish' )
+	// Don't run if no pretty permalinks or post is not published, scheduled, or privately published.
+	if ( ! get_option( 'permalink_structure' ) || ! in_array( $post['post_status'], array( 'publish', 'future', 'private' ) ) )
 		return;
 
 	// Short if there aren't any links or no '?attachment_id=' strings (strpos cannot be zero)
@@ -1268,7 +1268,13 @@ function _admin_notice_post_locked() {
 		?>
 		<div class="post-locked-message">
 		<div class="post-locked-avatar"><?php echo get_avatar( $user->ID, 64 ); ?></div>
-		<p class="currently-editing wp-tab-first" tabindex="0"><?php echo esc_html( sprintf( __( 'This content is currently locked. If you take over, %s will be blocked from continuing to edit.' ), $user->display_name ) ); ?></p>
+		<p class="currently-editing wp-tab-first" tabindex="0">
+		<?php
+			_e( 'This content is currently locked.' );
+			if ( $override )
+				printf( ' ' . __( 'If you take over, %s will be blocked from continuing to edit.' ), esc_html( $user->display_name ) );
+		?>
+		</p>
 		<?php do_action( 'post_locked_dialog', $post ); ?>
 		<p>
 		<a class="button" href="<?php echo esc_url( $sendback ); ?>"><?php echo $sendback_text; ?></a>
