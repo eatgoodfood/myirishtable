@@ -33,5 +33,12 @@
     	
   
 </footer>
-
+<script language="JavaScript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js" type="text/javascript"></script>
+		<script> 
+      		$(document).ready(function(){
+          $('#myCarousel').carousel({
+          	interval: 8000
+          });
+        });
+    </script>
 <?php wp_footer(); ?>
