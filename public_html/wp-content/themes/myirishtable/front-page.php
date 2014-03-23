@@ -1,25 +1,17 @@
-<!-- <section class="hero-unit">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
-      <img src="/assets/img/carousel3.jpg"/>
-    </div>
-  </div>
-</section> -->
-
-<section class="author-bio">
+<!--<section class="author-bio">-->
 <!-- Author biographies
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <!-- 2 columns of text below the carousel -->
-    <div class="row floating-heads">
+    <!--<div class="row floating-heads">
       <div class="col-lg-4">
         <img class="img-circle" src="/assets/img/cathal1-300x300.jpg" alt="Generic placeholder image">
         <h2>Cathal Armstrong</h2>
         <p>Chef Armstrong is a Best Mid-Atlantic Chef nominee by the James Beard Foundation in 2011, 2012, 2013; selected as both Food & Wine magazine’s “10 Best New Chefs 2006” and honored in Food & Wine magazine’s “50 Hall of Fame Best New Chefs” and Best Chef Award Winner by the Restaurant Association of Metropolitan Washington DC.</p>
         <h3><a>Read more...</a></h3>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
+      </div>--><!-- /.col-lg-4 -->
+      <!--<div class="col-lg-4">
         <img class="img-circle" src="/assets/img/logo/TSP-300px.png" alt="Generic placeholder image">
       </div>
       <div class="col-lg-4">
@@ -27,9 +19,9 @@
         <h2>David Hagedorn</h2>
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-</section>
+      </div>--><!-- /.col-lg-4 -->
+    <!--</div>--><!-- /.row -->
+<!--</section>-->
 
 <section class="mailing-list">
   <div class="row">
@@ -114,7 +106,7 @@
   </div>
 </section>
 
-<section class="media-coverage">
+<!--<section class="media-coverage">
   <div class="row">
     <div class="col-sm-12">
       <div class="table-responsive">
@@ -136,4 +128,4 @@
         </table>
     </div>
   </div>
-</section>
+</section>-->
