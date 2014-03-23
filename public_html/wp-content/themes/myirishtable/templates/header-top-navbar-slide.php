@@ -57,7 +57,7 @@
               <a href="//www.smithsonianmag.com/arts-culture/this-is-the-perfect-meal-to-cook-this-st-patricks-day-180950058/?no-ist"><img src="/assets/img/logo/smithsonian-gray-500px.png"></a>
             </td>
             <td class="neutral">
-              <a href="//www.foodandwine.com/blogs/2014/2/14/3-lessons-from-cathal-armstrongs-my-irish-table"><img src="/assets/img/logo/fandw-gray-500px.png"></a>
+              <a href="//www.foodandwine.com/blogs/2014/2/14/3-lessons-from-cathal-armstrongs-my-irish-table"><img src="/assets/img/logo/FandW-gray-500px.png"></a>
             </td>
           </tr>
         </table>
