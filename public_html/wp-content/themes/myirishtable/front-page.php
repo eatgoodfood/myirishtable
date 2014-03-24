@@ -26,7 +26,7 @@
 <section class="mailing-list">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2">
-      <h2>A bit of Irish for your inbox.</h2>
+      <h2>Stay updated.</h2>
       <form name="previewForm" method="post" class="form-horizontal subscribe-form" role="form" action="http://secure.campaigner.com/csb/Public/ProcessHostedForm.aspx" id="previewForm" enctype="multipart/form-data" target="_blank">
         <script type="text/javascript">
         //<![cdata[
@@ -129,3 +129,5 @@
     </div>
   </div>
 </section>-->
+
+

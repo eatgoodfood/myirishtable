@@ -25,7 +25,7 @@
 	
   		<div class="site-head-content inner">
 		  	<div class="row">
-			    <div class="col-lg-12">
+			    <div class="col-sm-12">
 			      <h1 class="blog-title">My Irish</h1>
 			      <h1 class="blog-title-2">Table</h1>
 			      <h2 class="blog-description">Recipes from the Homeland<br />and Restaurant Eve</h2>
@@ -33,7 +33,7 @@
 			    </div>
 		  	</div>
 		  	<div class="row social-btn">
-		      <a href="//wwww.twitter.com/myirishtable" target="_blank" class="ss-twitter ss-social-regular"></a>
+		      <a href="//www.twitter.com/myirishtable" target="_blank" class="ss-twitter ss-social-regular"></a>
 		      <a href="//www.instagram.com/myirishtable" target="_blank" class="ss-instagram ss-social-regular"></a>
 		    </div><!-- /.row -->
 		</div>
@@ -64,6 +64,47 @@
     </div>
   </div>
 </section>
+
+<!--<section class="media-coverage">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+    <h2>Where to buy.</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <tr>
+              <td>
+                <h3><a target="_blank" href="http://www.amazon.com/gp/product/1607744309?ie=UTF8&tag=randohouseinc5879-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1607744309">Amazon</a></h3>
+              </td>
+          </tr>
+          <tr>
+              <td class="neutral">
+                <h3><a target="_blank" href="http://search.barnesandnoble.com/booksearch/isbnInquiry.asp?EAN=9781607744306&cm_mmc=Random%20House-_-My+Irish+Table-HC--myirishtable-9781607744306-_-My+Irish+Table-HC--myirishtable-9781607744306-_-My+Irish+Table">Barnes & Noble</a></h3>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                <h3><a target="_blank" href="http://www.indiebound.org/product/info.jsp?affiliateId=randomhouse1&isbn=1607744309">Indiebound</a></h3>
+              </td>
+          </tr>
+          <tr>
+              <td class="neutral">
+                <h3><a target="_blank" href="https://itunes.apple.com/us/book/my-irish-table/id707354997?mt=11">iTunes</a></h3>
+              </td>
+          </tr>
+          <tr>
+            <td>
+                <h3><a target="_blank" href="https://play.google.com/store/search?q=9781607744313&c=books">Google Books</a></h3>
+              </td>
+          </tr>
+          <tr>
+            <td class="neutral">
+                <h3><a target="_blank" href="http://store.societyfair.net/products/my-irish-table-recipes-from-the-homeland-and-restaurant-eve">Society Fair</a></h3>
+              </td>
+          </tr>
+        </table>
+    </div>
+  </div>
+</section>-->
 
 <section class="mailing-list visible-lg">
   <div class="row">
