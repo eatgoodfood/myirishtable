@@ -4,18 +4,15 @@
 		
 		<div class="row">
 	    	
-	    	<div class="col-sm-4 col-xs-4">
-	    		<p class="ss-chat big footer-icon"></p>
+	    	<div class="col-xs-12 col-sm-4">
 	      		<?php dynamic_sidebar('sidebar-footer'); ?>
 	    	</div>
 	    
-	    	<div class="col-sm-4 col-xs-4">
-	    		<p class="ss-location big footer-icon"></p>
+	    	<div class="col-xs-12 col-sm-4">
 	      		<?php dynamic_sidebar('sidebar-footer-b'); ?>
 	    	</div>
 	    	
-	    	<div class="col-sm-4 col-xs-4">
-	    		<p class="ss-usergroup big footer-icon"></p>
+	    	<div class="col-xs-12 col-sm-4">
 		  <?php dynamic_sidebar('sidebar-footer-c'); ?>
 		    </div>
 		    
