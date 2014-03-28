@@ -1,4 +1,4 @@
-<header role="banner" class="site-head" style="background-image: url(/assets/img/cover-image.jpg)">
+<header role="banner" class="site-head">
 
   	<div class="vertical">
 
